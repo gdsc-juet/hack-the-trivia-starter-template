@@ -17,7 +17,7 @@ Welcome to Hack The Trivia! We are excited to have you participate in our hackat
 - **Hackathon Name:** Hack The Trivia
 - **Organizers:** GDSC JUET
 - **Event Date:** 27th - 28th January, 2024
-- **Website:**
+- **Website: https://hack-the-trivia.devfolio.co/**
 
 ## Tracks
 
