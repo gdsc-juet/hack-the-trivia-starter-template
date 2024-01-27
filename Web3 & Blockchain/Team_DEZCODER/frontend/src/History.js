@@ -6,7 +6,6 @@ import React, { useState, useEffect } from "react";
 export default function History({ contract, web3, allright, isConnect, cA }) {
 
   const [dEventData, setDEventData] = useState(null);
-  // const [wEventData, setWEventData] = useState(null);
   const [tEventData, setTEventData] = useState(null);
 
   const convertToEthers = (amt) => {
