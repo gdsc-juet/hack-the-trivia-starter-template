@@ -130,7 +130,7 @@ export default function App() {
 
   const getContract = async() =>{
     if(web3Provider != null && web3 != null){
-      const contractAddress = '0x37cf3f31fe4714bdf4329d3facbc317c805e24a7';
+      const contractAddress = '0xc7e521cfe545d1fa28b7d4082678bd2e6fc860df';
       const contractABI = ABI.abi;
       const cs = new web3.eth.Contract(contractABI,contractAddress);
       setContract(cs);

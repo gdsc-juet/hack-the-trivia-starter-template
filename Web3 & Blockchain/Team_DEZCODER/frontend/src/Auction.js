@@ -15,14 +15,13 @@ import Welcome from "./Welcome";
 //web3
 const Web3 = require('web3');
 
-export default function Auction({currentAddress,isConnect,contract,accFunc}) {
+export default function Auction({currentAddress,isConnect,contract,changingNFT}) {
     const [activeKey, setActiveKey] = useState("create");
     const addrVal = (isConnect? trim(currentAddress) : "Not Connected");
 
     // const [cA, setCA] = useState("");
     // const [isConnect, setConnected] = useState(0);
 
-    const [changingNFT, setChangingNFT] = useState({});
     const [allright, setAllRight] = useState(0);
     const [ip1,setip1] = useState("");
     const [ip2,setip2] = useState("");
@@ -88,10 +87,10 @@ export default function Auction({currentAddress,isConnect,contract,accFunc}) {
                 // const tinMin = Number(ip4);
                 // const duration = tinMin*60;
                 // const dr = duration.toString();
-                await changingNFT.methods.approveTransfer('0xeca586b4361aceebfc18eedd2ab4b831c004d9aa',0).send({from:currentAddress})
-                .on('transactionHash', function(hash){
-                    console.log("Confirm transaction with hash ",hash);
-                });
+                // await changingNFT.methods.approveTransfer('0x52e7a9ae9c3f1af7de26708ed054f8f745e0fa6d',ip2).send({from:currentAddress})
+                // .on('transactionHash', function(hash){
+                //     console.log("Confirm transaction with hash ",hash);
+                // });
 
                 await contract.methods.createAuction(ip1,ip2,price,ip4).send({from:currentAddress})
                 .on('transactionHash', function(hash){
