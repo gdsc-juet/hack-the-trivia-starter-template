@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:healthon/core/app_export.dart';
 
+// ignore: must_be_immutable
 class CustomRatingBar extends StatelessWidget {
   CustomRatingBar({
     Key? key,

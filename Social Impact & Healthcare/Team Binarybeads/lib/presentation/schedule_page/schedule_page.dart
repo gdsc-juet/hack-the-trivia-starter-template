@@ -19,6 +19,7 @@ class SchedulePageState extends State<SchedulePage>
   bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return SafeArea(
       child: Scaffold(
         body: Container(

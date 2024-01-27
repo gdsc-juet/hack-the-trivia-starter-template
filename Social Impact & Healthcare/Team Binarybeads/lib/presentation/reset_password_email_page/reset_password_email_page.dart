@@ -22,6 +22,7 @@ class ResetPasswordEmailPageState extends State<ResetPasswordEmailPage>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return SafeArea(
         child: Scaffold(
             resizeToAvoidBottomInset: false,

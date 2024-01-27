@@ -6,6 +6,7 @@ import 'package:healthon/widgets/app_bar/appbar_leading_image.dart';
 import 'package:healthon/widgets/app_bar/appbar_subtitle_one.dart';
 import 'package:healthon/widgets/app_bar/custom_app_bar.dart';
 
+// ignore: must_be_immutable
 class LocationScreen extends StatelessWidget {
   LocationScreen({Key? key})
       : super(
