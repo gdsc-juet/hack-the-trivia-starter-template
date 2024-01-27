@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HospitEase Navigator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #292b2c; 
+            color: #fff;
+        }
+
+        header {
+            background-color: #343a40; 
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #343a40; 
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        input[type=text] {
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #5bc0de; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        form input,
+        form select {
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .results-container {
+            text-align: center;
+            padding: 2em;
+        }
+
+        .hospital-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            margin: 1em;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HospitEase Navigator</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search for hospitals...">
+        <button>Search</button>
+    </div>
+
+    <form>
+        <h2 style="color: #5bc0de;">Add/Update Hospital Information</h2>
+
+        <label for="hospitalName">Hospital Name:</label>
+        <input type="text" id="hospitalName" name="hospitalName" required>
+
+        <label for="numBeds">Number of Beds:</label>
+        <input type="number" id="numBeds" name="numBeds" required>
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" required>
+
+        <label for="cost">Cost per Night:</label>
+        <input type="number" id="cost" name="cost" required>
+
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability" required>
+            <option value="available">Available</option>
+            <option value="notAvailable">Not Available</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="results-container">
+        <div class="hospital-card">
+            <h2>Hospital Name</h2>
+            <p>Number of Beds: 200</p>
+            <p>Class: Premium</p>
+            <p>Cost: $1000 per night</p>
+            <p>Availability: Available</p>
+            <button>Edit</button>
+        </div>
+
+        
+    </div>
+
+</body>
+</html>
