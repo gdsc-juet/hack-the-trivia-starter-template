@@ -51,26 +51,26 @@ export default function App() {
   };
 
   const addNetwork = () => {
-    // const network = {
-    //   chainId: `0x${Number(80001).toString(16)}`,
-    //   chainName: "Mumbai",
-    //   rpcUrls: ["https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78"],
-    //   nativeCurrency: {
-    //     name: "MATIC",
-    //     symbol: "MATIC",
-    //     decimals: 18,
-    //   }
-    // };
     const network = {
-      chainId: `0x${Number(11155111).toString(16)}`,
-      chainName: "Sepolia",
-      rpcUrls: ["https://endpoints.omniatech.io/v1/eth/sepolia/public"],
+      chainId: `0x${Number(80001).toString(16)}`,
+      chainName: "Mumbai",
+      rpcUrls: ["https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78"],
       nativeCurrency: {
-        name: "SepoliaETH",
-        symbol: "SepoliaETH",
+        name: "MATIC",
+        symbol: "MATIC",
         decimals: 18,
       }
     };
+    // const network = {
+    //   chainId: `0x${Number(11155111).toString(16)}`,
+    //   chainName: "Sepolia",
+    //   rpcUrls: ["https://endpoints.omniatech.io/v1/eth/sepolia/public"],
+    //   nativeCurrency: {
+    //     name: "SepoliaETH",
+    //     symbol: "SepoliaETH",
+    //     decimals: 18,
+    //   }
+    // };
     //Request to add network
     web3Provider
       .request({
@@ -89,7 +89,7 @@ export default function App() {
     try {
       await web3Provider.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: `0x${Number(11155111).toString(16)}` }],
+        params: [{ chainId: `0x${Number(80001).toString(16)}` }],
         jsonrpc: '2.0',
       });
     } catch (error) {
@@ -214,7 +214,7 @@ export default function App() {
     if (web3 != null) {
       checkConnection();
       if(!isConnect) walletConnect();
-      // getContract();
+      getContract();
 
       web3Provider.on("chainChanged", handleChainChanged);
       web3Provider.on("accountsChanged", handleDisconnect);
