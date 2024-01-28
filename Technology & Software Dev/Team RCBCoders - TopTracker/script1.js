@@ -170,7 +170,7 @@ function getMovie(url)
 function bindData(data){
     main1.innerHTML = '';
     data.forEach(movie =>{
-        const {title,poster_path,vote_average
+        const {name,poster_path,vote_average
             ,overview} = movie; 
        const movielist= document.createElement('div')
        movielist.classList.add('movie')
@@ -179,7 +179,7 @@ function bindData(data){
        <img src="${poster_path?IMAGE_URL+poster_path:"https://previews.123rf.com/images/lightwise/lightwise1709/lightwise170900097/86893299-404-error-page-not-found-concept-and-a-broken-or-dead-link-symbol-as-a-kitten-cat-emerging-from-a.jpg"}" alt="cat" id="news-img">          
      </div>
      <div class="card-content">
-     <h3 id="news-title">${title}</h3>
+     <h3 id="news-title">${name}</h3>
      <div class="title-source">
        <h6 id="${getcolor(vote_average)}">${vote_average}</h6>
        </div>
