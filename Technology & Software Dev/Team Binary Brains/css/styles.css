@@ -29,8 +29,8 @@ body {
 
 /* Header appears as a translucent overlay on the background */
 header {
-  background: rgba(52, 73, 94, 0.85); /* Dark translucent overlay */
-  color: #ffffff;
+  background: rgba(0, 0, 0, 0.9); /* Dark translucent overlay */
+  color: #25f362;
   padding: 30px 0;
   text-align: center;
 }
@@ -45,7 +45,7 @@ nav ul {
   list-style-type: none;
   text-align: center;
   padding: 10px 0;
-  background-color: rgba(0,0,0,0.1); /* slight dark overlay for nav */
+  background-color: rgba(65, 48, 48, 0.9); /* slight dark overlay for nav */
 }
 
 nav ul li {
@@ -55,7 +55,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #f8f8f8;
+  color: #000000;
   padding: 10px;
   transition: color 0.3s, transform 0.3s;
 }
@@ -69,26 +69,26 @@ nav ul li a:hover {
 main {
   padding: 30px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.9); /* Slightly translucent white for content area */
+  background: rgba(65, 48, 48, 0.9); /* Slightly translucent white for content area */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s; /* Smoothly transition changes */
 }
 
 main h2 {
-  color: #3498db;
+  color: #ffffff;
   margin: 20px 0;
 }
 
 main p {
   font-size: 1rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #ffffff;
 }
 
 /* Footer with consistent theming */
 footer {
-  background: rgba(52, 73, 94, 0.85);
-  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 20px 0;
   position: relative;
