@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiMitra</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    
+    <div class="heading2">
+        <h2>KrishiMitra</h2>        
+    </div>
+
+    <div class="logo">
+        <img id = "krishiLogo" src="../krishi-mitra-logo.svg">
+    </div>
+    <div id="textContainer" onmouseover="changeLanguage('Hindi')" onmouseout="changeLanguage('english')">
+        <h1><p class="english-text">Digital Vigyapan</p></h1>
+      </div>
+    <div class="paragraph" onmouseover="changeLanguage('Hindi')" onmouseout="changeLanguage('english')">
+        <p></p>
+
+    </div>
+    <div class="cover">
+        <a href="./form.html">
+        <div class="card" style="width: 20rem;">
+            <img src="./google-logo-9808.png" class="card-img-top" alt="loading...">
+            <div class="card-body">
+                <h1 class="card-title"> ₹99/month</h1>
+                <p class="card-text">Here u engaged your crops to advertise in
+                     google adsense.
+                    and make it very easy to find and
+                      reach customer for your crop.
+                    </p>
+            </div>
+        </div></a>
+
+        <a href="./form.html">
+        <div class="card" style="width: 22rem;">
+            <img src="../GoogleYoutubeLogo.png" id="card-img-top" height="55%" alt="loading...">
+            <div class="card-body">
+                <h1 class="card-title">₹199/month</h1>
+                <p class="card-text">Here u advertise your products and crops by video and photo here u show and publice and get more audience.
+                    projects.</p>
+            </div>
+        </div></a>
+
+        <a href="./form.html">
+        <div class="card" style="width: 20rem;">
+            <img src="./1658586823instagram-logo-transparent.png"
+                class="card-img-top" alt="loading...">
+                <div class="card-body">
+                    <h1 class="card-title"> ₹59/month</h1>
+                    <p class="card-text">Here this u share all the kind of  crops and target and all the new and target audience tradesperson who specializes in marketing</p>
+            </div>
+        </div></a>
+    </div>
+    <script>
+        function changeLanguage(language) {
+          var textContainer = document.getElementById('textContainer');
+          var textElement = textContainer.querySelector('p');
+      
+          // Define language-specific text
+          var languageText = {
+            'english': 'Digital vigyapan',
+            'Hindi': 'डिजिटल विज्ञापन',
+
+          };
+          var languageText = {
+            'english': 'want u to sell your crops on very larger market here all the digital advertisement things for u where u all the farmers sells your crops very easily',
+            'Hindi': 'आप चाहते हैं कि आप अपनी फसलें बहुत बड़े बाजार में बेचें, यहां आपके लिए सभी डिजिटल विज्ञापन चीजें हैं, जहां आप सभी किसान अपनी फसलें बहुत आसानी से बेचते'
+
+          };
+      
+          // Change the text and style based on the selected language
+          if (languageText[language]) {
+            textElement.textContent = languageText[language];
+            textElement.className = (language === 'english') ? 'english-text' : 'Hindi-text';
+          }
+        }
+      </script>
+
+
+     
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Add a geocoder</title>
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet">
+      <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
+      <!-- Load the `mapbox-gl-geocoder` plugin. -->
+      <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+      <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: black;
+        }
+    
+        #map {
+          position: absolute;
+          top: 120px;
+          bottom: 100px;
+          right: 10px;
+          left: 150px;
+          width: 80%;
+        }
+    
+        #navbar {
+          background-color: #333;
+          padding: 15px;
+          text-align: center;
+        }
+    
+        #navbar h1 {
+          color: white;
+        }
+    
+        .mapboxgl-canvas-container {
+          cursor: url('https://unpkg.com/mapbox-gl@3.1.0/dist/theme/images/cursor-arrow.png'), auto;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="navbar">
+        <h1>Storage Locator</h1>
+      </div>
+      
+    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">...... <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+      </svg>
+      </button>
+      
+      
+      
+      <!-- Dropdown menu -->
+ 
+      
+     
+    
+      <div id="map"></div>
+<div class="mt-10">Near-by location</div>
+      <div style="height: 5rem; display:flex; ; width:80vw; gap:0.5rem;  position:absolute; bottom: 1rem; right: 10rem;">
+        <div style="flex:1; background-color:white">Sharma cold storage , rajpura</div>
+        <div style="width:20%; background-color:white;">100rs per day </div>
+      </div>
+      <div style="height: 5rem; display:flex; ; width:80vw; gap:0.5rem;  position:absolute; bottom: -5rem; right: 10rem;">
+        <div style="flex:1; background-color:white">Mishra Cold storage</div>
+        <div style="width:20%; background-color:white;">200rs per day</div>
+      </div>
+      <div style="height: 5rem; display:flex; ; width:80vw; gap:0.5rem;  position:absolute; bottom: -11rem; right: 10rem;">
+        <div style="flex:1; background-color:white">Gupta ware huse</div>
+        <div style="width:20%; background-color:white;">300 rs per day </div>
+      </div>
+    
+      <script>
+      
+	// https://account.mapbox.com
+	mapboxgl.accessToken = 'pk.eyJ1IjoiaW1hcnlhbjk5OSIsImEiOiJjbHJreWE1YzkwamQzMm1wZTJlMnNjbnFtIn0.4dmdtraXTBnsk9mOQvn6ag';
+const map = new mapboxgl.Map({
+container: 'map', // container ID
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+style: 'mapbox://styles/mapbox/streets-v12', // style URL
+center: [-24, 42], // starting center in [lng, lat]
+zoom: 1 // starting zoom
+});
+ 
+// Add geolocate control to the map.
+map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+// When active the map will receive updates to the device's location as it changes.
+trackUserLocation: true,
+// Draw an arrow next to the location dot to indicate which direction the device is heading.
+showUserHeading: true
+})
+);
+</script>
+        
+      
+    </body>
+    </html>
+    
