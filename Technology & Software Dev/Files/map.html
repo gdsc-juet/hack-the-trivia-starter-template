@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Interactive Map</title>
-
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-
   <!-- Leaflet Draw CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css"/>
-
+  <!-- Leaflet Geocoder CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
   <style>
     html, body {
       height: 100%;
@@ -21,32 +19,47 @@
       width: 100%;
       height: 100vh; /* Using 100vh which is 100% of the viewport height */
     }
+    /* Additional styles for the input form */
+    #city-input {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    #city-input input {
+      margin-right: 5px;
+    }
   </style>
 </head>
 <body>
+  <!-- Div for city distance calculation inputs -->
+  <div id="city-input">
+    <input type="text" id="city1" placeholder="Enter first city..." />
+    <input type="text" id="city2" placeholder="Enter second city..." />
+    <button onclick="calculateDistance()">Calculate Distance</button>
+  </div>
+
   <div id="map"></div>
 
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
   <!-- Leaflet Draw JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
-
+  <!-- Leaflet Geocoder JavaScript -->
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
   <script>
-    // Initialize the map and set its view to our chosen geographical coordinates and a zoom level:
     var map = L.map('map').setView([51.505, -0.09], 13);
-
-    // Add a tile layer to add to our map, in this case it's a basic OpenStreetMap tile layer:
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
-
-    // FeatureGroup is to store editable layers
     var drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
-
-    // Initialise the draw control and pass it the FeatureGroup of editable layers
     var drawControl = new L.Control.Draw({
       edit: {
         featureGroup: drawnItems
@@ -54,17 +67,61 @@
     });
     map.addControl(drawControl);
 
-    // Set up a listener for Draw events
+    var geocoder = L.Control.geocoder({
+      defaultMarkGeocode: false,
+      position: 'topleft'
+    }).on('markgeocode', function(e) {
+      var bbox = e.geocode.bbox;
+      var poly = L.polygon([
+        bbox.getSouthEast(),
+        bbox.getNorthEast(),
+        bbox.getNorthWest(),
+        bbox.getSouthWest()
+      ]).addTo(map);
+      map.fitBounds(poly.getBounds());
+    }).addTo(map);
+
     map.on(L.Draw.Event.CREATED, function (event) {
-      var layer = event.layer;
-
-      // Add the new layer to the editable layer group
-      drawnItems.addLayer(layer);
-
-      // You can use layer.toGeoJSON() to get the geometry of the drawn feature and save it to a database if needed
-      // var geometry = layer.toGeoJSON();
-      // console.log(geometry);
+        var layer = event.layer;
+        drawnItems.addLayer(layer);
     });
+
+    // Additional code for city Distance calculation
+    function calculateDistance() {
+      var city1 = document.getElementById('city1').value;
+      var city2 = document.getElementById('city2').value;
+
+      Promise.all([
+        getCoordinates(city1),
+        getCoordinates(city2)
+      ]).then(function(results) {
+        var latlng1 = results[0];
+        var latlng2 = results[1];
+
+        // Check if both cities' coordinates are retrieved
+        if(latlng1 && latlng2) {
+          // Calculate the Distance using Leaflet's distanceTo method
+          var distance = latlng1.distanceTo(latlng2);
+          alert('Distance between ' + city1 + ' and ' + city2 + ' is: ' + (distance / 1000).toFixed(2) + ' km');
+        } else {
+          alert('Could not find one of the cities.');
+        }
+      });
+    }
+
+    function getCoordinates(cityName) {
+      return fetch('https://nominatim.openstreetmap.org/search?format=json&q=' + cityName)
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.length > 0) {
+            var details = data[0];
+            return L.latLng(details.lat, details.lon);
+          } else {
+            return null;
+          }
+        });
+    }
   </script>
+  <script src="/home/linuxer78/Documents/hack-the-trivia-starter-template/Technology & Software Dev/Files/js/map.js"></script>
 </body>
 </html>
