@@ -1,0 +1,4 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .cache/replit/modules/nodejs-20:v24-20240117-0bd73cd","time":"2024-01-27T08:46:53Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .cache/typescript/4.8/node_modules/.bin/parser","time":"2024-01-27T08:46:53Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .cache/typescript/5.0/node_modules/.bin/parser","time":"2024-01-27T08:46:59Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file .config/npm/node_global/bin/truffle","time":"2024-01-27T08:47:10Z"}
