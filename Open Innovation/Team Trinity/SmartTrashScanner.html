@@ -51,28 +51,11 @@
             background-color: #2980b9;
         }
 
-        .upload-section {
-            text-align: center;
-            margin-top: 2em;
-        }
-
-        #uploadBtn {
-            display: none;
-        }
-
-        #imagePreview {
-            max-width: 100%;
-            margin-top: 1em;
-        }
-
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
@@ -103,37 +86,14 @@
         </ul>
     </section>
 
-    <section class="upload-section">
+    <section>
         <h2>Get Started</h2>
         <p>Start managing your household waste responsibly. Upload a picture of your trash now!</p>
-        <label for="uploadBtn" class="cta-button">Upload Your Trash</label>
-        <input type="file" id="uploadBtn" accept="image/*" onchange="previewImage(event)">
-        <div id="imagePreview"></div>
+        <a href="#" class="cta-button">Upload Your Trash</a>
     </section>
 
     <footer>
         <p>&copy; 2024 SmartTrashScanner. All rights reserved.</p>
     </footer>
-
-    <script>
-        function previewImage(event) {
-            const preview = document.getElementById('imagePreview');
-            const file = event.target.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function(e) {
-                    const img = document.createElement('img');
-                    img.src = e.target.result;
-                    img.style.maxWidth = '100%';
-                    preview.innerHTML = '';
-                    preview.appendChild(img);
-                }
-
-                reader.readAsDataURL(file);
-            }
-        }
-    </script>
 </body>
 </html>
