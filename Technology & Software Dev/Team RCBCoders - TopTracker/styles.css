@@ -257,18 +257,19 @@ footer{
 }
 
 .hi{
-    color: #333;
-    font-family: 'Poppins','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #269b95;
+    font-family: 'ariel','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     
 }
 
 #follow{
-    color: black;
+    color: #269b95;;
 }
 
 .upcomming{
     text-align: center;
+    color:#269b95;
 }
 @media (max-width: 1000px){
     
