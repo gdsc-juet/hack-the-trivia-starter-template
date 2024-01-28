@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student | Dashboard</title>
+
+  <!-- Normalize browser inconsistencies -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <script defer src="./js/fontawesome-all.min.js"></script>
+  <!-- MD Bootstrap -->
+  <link rel="stylesheet" href="./css/mdb.min.css">
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    .content .card {
+      width: 80%;
+    }
+
+    .content .card .card-deck .card {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 575px) {
+      .content .card {
+        width: 90%;
+        min-width: 0;
+      }
+    }
+
+    /* Scrollbar styling */
+
+    body::-webkit-scrollbar {
+      width: 9px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: rgb(2, 175, 175);
+    }
+
+    body::-webkit-scrollbar-track {
+      background-color: rgb(230, 223, 223);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Wrapper stretches to the whole viewport height -->
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="navbar sticky-top">
+      <div class="navbar-header">
+        <img src="./img/drake-ramoray.jpg" class="rounded-circle" alt="Profile picture">
+        <h5 class="navbar-brand m-1 text-white pl-2">Dr. Drake Ramoray</h5>
+      </div>
+
+      <!-- Navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="./index.html" class="nav-link btn btn-block btn-lg">
+            <i class="fas fa-newspaper fa-lg mr-1"></i>
+            <span>Feed</span>
+            <span class="badge red d-flex align-items-center justify-content-center">New</span>
+          </a>
+        </li>
+        <li class="nav-item btn-group">
+          <a href="#" class="nav-link btn btn-block btn-lg dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fas fa-graduation-cap fa-lg mr-1"></i>
+            <span>Grades</span>
+          </a>
+          <ul id="marks" class="dropdown-menu">
+            <li>
+              <a href="./grades-sem-1.html" class="nav-link dropdown-item">Semester 1</a>
+            </li>
+            <li>
+              <a href="./grades-sem-2.html" class="nav-link dropdown-item">Semester 2</a>
+            </li>
+            <li>
+              <a href="./grades-sem-3.html" class="nav-link dropdown-item">Semester 3</a>
+            </li>
+            <li>
+              <a href="./grades-sem-4.html" class="nav-link dropdown-item">Semester 4</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="./resources.html" class="nav-link btn btn-block btn-lg">
+            <i class="fas fa-file-alt fa-lg mr-1"></i>
+            <span>Resources</span>
+            <span class="badge badge-pill green d-flex align-items-center justify-content-center">14</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./attendance.html" class="nav-link btn btn-block btn-lg">
+            <i class="far fa-user-circle fa-lg mr-1"></i>
+            <span>Attendance</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <!-- Topbar -->
+      <nav id="topbar" class="navbar navbar-expand-md sticky-top">
+        <!-- sidebar toggle button -->
+        <button id="topbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse">
+          <span class="fas fa-align-left"></span>
+        </button>
+        <!-- topbar items toggle button -->
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#topbar-items">
+          <span class="fas fa-ellipsis-v"></span>
+        </button>
+        <!-- topbar items -->
+        <div class="navbar-collapse collapse" id="topbar-items">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="#">
+                <i class="fa fa-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="#">
+                <i class="fas fa-credit-card"></i>
+                <span>Gate Pass</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link waves-effect waves-light dropdown-toggle" id="dropdown-items" data-toggle="dropdown">
+                <img src="img/drake-ramoray.jpg" class="rounded-circle" alt="profile picture">
+              </a>
+              <div class="dropdown-menu dropdown-menu-right dropdown-menu-secondary">
+                <a class="dropdown-item waves-effect waves-light" href="#">Profile</a>
+                <a class="dropdown-item waves-effect waves-light" href="#">Feedback</a>
+                <a class="dropdown-item waves-effect waves-light" href="#">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <div class="content">
+
+        <!-- First subject card -->
+        <article class="card card-cascade wider">
+          <section class="view gradient-card-header purple-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
+            <img src="./img/teachers/emma-stone.jpeg" class="rounded-circle" alt="Profile picture" height="60px" width="60px">
+            <h4 class="card-header">Emma Stone</h4>
+          </section>
+
+          <section class="card-body">
+            <!-- First card deck -->
+            <section class="card-deck">
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="indigo-text darken-4">
+                    <i class="fas fa-sticky-note"></i>
+                    Notes
+                  </h6>
+                  <p class="card-text">The magical world of La La Land</p>
+                  <a class="btn btn-indigo" role="button" target="_blank">Download</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="indigo-text darken-4">
+                    <i class="fas fa-sticky-note"></i>
+                    Notes
+                  </h6>
+                  <p class="card-text">How NOT to fall and die</p>
+                  <a class="btn btn-indigo" role="button" target="_blank">Download</a>
+                </section>
+              </section>
+            </section>
+          </section>
+        </article>
+
+        <!-- Second subject card -->
+        <article class="card card-cascade wider">
+          <section class="view gradient-card-header peach-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
+            <img src="./img/teachers/lalu.jpeg" class="rounded-circle" alt="Profile picture" height="60px" width="60px">
+            <h4 class="card-header">Lalu Prasad Yadav</h4>
+          </section>
+
+          <section class="card-body">
+            <section class="card-deck">
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="red-text darken-4">
+                    <i class="fab fa-youtube"></i>
+                    Video
+                  </h6>
+                  <p class="card-text">Politics in Machine Learning</p>
+                  <a class="btn btn-danger" role="button" target="_blank">Watch video</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="indigo-text darken-4">
+                    <i class="fas fa-sticky-note"></i>
+                    Notes
+                  </h6>
+                  <p class="card-text">How to be a leader</p>
+                  <a class="btn btn-indigo" role="button" target="_blank">Download</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="darken-4">
+                    <i class="fas fa-book"></i>
+                    Book
+                  </h6>
+                  <p class="card-text">Anand Kumar Book</p>
+                  <a class="btn btn-elegant" role="button" target="_blank">Download illegal pdf</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="pink-text darken-4">
+                    <i class="fas fa-file-alt"></i>
+                    Assignment
+                  </h6>
+                  <p class="card-text">K-Map assignment</p>
+                  <a class="btn btn-unique" role="button" target="_blank">Download assignment</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="red-text darken-4">
+                    <i class="fab fa-youtube"></i>
+                    Video
+                  </h6>
+                  <p class="card-text">Speech giving robot</p>
+                  <a class="btn btn-danger" role="button" target="_blank">Watch video</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="deep-orange-text darken-4">
+                    <i class="fas fa-file-powerpoint"></i>
+                    Powerpoint Presentation
+                  </h6>
+                  <p class="card-text">A good teacher</p>
+                  <a class="btn btn-deep-orange" role="button" target="_blank">Download ppt</a>
+                </section>
+              </section>
+            </section>
+          </section>
+        </article>
+
+        <!-- Ross Geller's card -->
+        <article class="card card-cascade wider">
+          <section class="view gradient-card-header aqua-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
+            <img src="./img/teachers/ross-geller.jpg" class="rounded-circle" alt="Profile picture" height="60px" width="60px">
+            <h4 class="card-header">Dr. Ross Geller</h4>
+          </section>
+
+          <section class="card-body">
+            <section class="card-deck">
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="darken-4">
+                    <i class="fas fa-book"></i>
+                    Book
+                  </h6>
+                  <p class="card-text">Prehistoric life</p>
+                  <a href="https://www.amazon.in/Prehistoric-Life-Definitive-Visual-History/dp/075669910X" class="btn btn-elegant" role="button"
+                    target="_blank">Buy book</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="deep-purple-text darken-4">
+                    <i class="far fa-newspaper"></i>
+                    Article
+                  </h6>
+                  <p class="card-text">Best places to see fossils</p>
+                  <a href="https://www.smithsonianmag.com/travel/travel-through-time-national-fossil-day-180952992/" class="btn btn-deep-purple"
+                    role="button" target="_blank">View article</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="red-text darken-4">
+                    <i class="fab fa-youtube"></i>
+                    Video
+                  </h6>
+                  <p class="card-text">Unagi</p>
+                  <a href="https://www.youtube.com/watch?v=jbRVoTL5djs" class="btn btn-danger" role="button" target="_blank">Watch video</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="red-text darken-4">
+                    <i class="fab fa-youtube"></i>
+                    Video
+                  </h6>
+                  <p class="card-text">Artificial gas in gas cylinders</p>
+                  <a href="https://www.youtube.com/watch?v=k7lKAKopkf4" class="btn btn-danger" role="button" target="_blank">Watch video</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="deep-purple-text darken-4">
+                    <i class="far fa-newspaper"></i>
+                    Article
+                  </h6>
+                  <p class="card-text">A successful marriage</p>
+                  <a href="https://www.becomingminimalist.com/8-essentials-for-a-successful-marriage/" class="btn btn-deep-purple" role="button"
+                    target="_blank">View article</a>
+                </section>
+              </section>
+            </section>
+          </section>
+        </article>
+
+        <!-- Third subject card -->
+        <article class="card card-cascade wider">
+          <section class="view gradient-card-header blue-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
+            <img src="./img/teachers/alexandra.jpeg" class="rounded-circle" alt="Profile picture" height="60px" width="60px">
+            <h4 class="card-header">Alexandra Daddario</h4>
+          </section>
+
+          <section class="card-body">
+            <section class="card-deck">
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="deep-orange-text darken-4">
+                    <i class="fas fa-file-powerpoint"></i>
+                    Powerpoint Presentation
+                  </h6>
+                  <p class="card-text">Flora &amp; Fauna in a Rainforest</p>
+                  <a class="btn btn-deep-orange" role="button" target="_blank">Download ppt</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="darken-4">
+                    <i class="fas fa-book"></i>
+                    Book
+                  </h6>
+                  <p class="card-text">Biology for Dummies!</p>
+                  <a class="btn btn-elegant" role="button" target="_blank">Download pdf</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="indigo-text darken-4">
+                    <i class="fas fa-sticky-note"></i>
+                    Notes
+                  </h6>
+                  <p class="card-text">Man vs Wild</p>
+                  <a class="btn btn-indigo" role="button" target="_blank">Download</a>
+                </section>
+              </section>
+            </section>
+          </section>
+        </article>
+
+        <!-- Fourth subject card -->
+        <article class="card card-cascade wider">
+          <section class="view gradient-card-header peach-gradient overlay d-flex align-items-center justify-content-center pt-2 pb-2">
+            <img src="./img/teachers/snoop-dogg.png" class="rounded-circle" alt="Profile picture" height="60px" width="60px">
+            <h4 class="card-header">Snoop Dogg</h4>
+          </section>
+
+          <section class="card-body">
+            <section class="card-deck">
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="pink-text darken-4">
+                    <i class="fas fa-file-alt"></i>
+                    Assignment
+                  </h6>
+                  <p class="card-text">Art of Living amongst Trees</p>
+                  <a class="btn btn-unique" role="button" target="_blank">Download assignment</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="deep-purple-text darken-4">
+                    <i class="far fa-newspaper"></i>
+                    Article
+                  </h6>
+                  <p class="card-text">Everything to know about Cannabis</p>
+                  <a href="https://hightimes.com/guides/marijuana-cannabis/" class="btn btn-deep-purple" role="button" target="_blank">View article</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="red-text darken-4">
+                    <i class="fab fa-youtube"></i>
+                    Video
+                  </h6>
+                  <p class="card-text">Thug Life</p>
+                  <a href="https://www.youtube.com/watch?v=QZXc39hT8t4" class="btn btn-danger" role="button" target="_blank">Watch video</a>
+                </section>
+              </section>
+              <section class="card">
+                <section class="view overlay p-3 text-center">
+                  <h6 class="red-text darken-4">
+                    <i class="fab fa-youtube"></i>
+                    Video
+                  </h6>
+                  <p class="card-text">Praise for other cultures</p>
+                  <a href="https://www.youtube.com/watch?v=Ar4CJKf1LwE" class="btn btn-danger" role="button" target="_blank">Watch video</a>
+                </section>
+              </section>
+            </section>
+          </section>
+        </article>
+      </div>
+
+      <!-- Bootstrap dependencies -->
+      <!-- First jQuery, then Popper.js and lastly Bootstrap JS -->
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+      <script src="js/mdb.min.js"></script>
+      <!-- Custom script -->
+      <script src="./js/scripts.js"></script>
+</body>
+
+</html>
