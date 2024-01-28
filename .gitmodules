@@ -1,0 +1,6 @@
+[submodule "Web3 & Blockchain/Team_DEZCODER/backend/lib/forge-std"]
+	path = Web3 & Blockchain/Team_DEZCODER/backend/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Web3 & Blockchain/Team_DEZCODER/backend/lib/openzeppelin-contracts"]
+	path = Web3 & Blockchain/Team_DEZCODER/backend/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
