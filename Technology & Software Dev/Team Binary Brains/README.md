@@ -1,8 +1,8 @@
-# Open Logistics Map
+# Mapify
 
 ## Introduction
 
-Open Logistics Map is an open-source solution designed for e-commerce platforms, enabling a seamless integration of mapping functionalities critical for buyers and sellers. With the use of open-source maps, the platform supports various operations such as polygon creation, route generation, reverse-geocoding, distance computation, and dynamic mapping. Our solution contributes to democratizing the e-commerce space by leveraging cost-effective, scalable, and versatile mapping technologies including GPS coordinates, Google S2 cells, and Uber H3 cells.
+Mapify is an open-source solution designed for e-commerce platforms, enabling a seamless integration of mapping functionalities critical for buyers and sellers. With the use of open-source maps, the platform supports various operations such as polygon creation, route generation, reverse-geocoding, distance computation, and dynamic mapping. Our solution contributes to democratizing the e-commerce space by leveraging cost-effective, scalable, and versatile mapping technologies including GPS coordinates, Google S2 cells, and Uber H3 cells.
 
 ## Features
 
