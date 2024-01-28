@@ -1,0 +1,125 @@
+/* styles.css */
+
+/* Reset basic elements for consistent styling */
+body, h1, h2, nav, ul, li, p, footer {
+  margin: 0;
+  padding: 0;
+}
+
+/* Box-sizing border-box to include padding and border in the element's total width and height */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body styles with a dark aesthetic */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #f0f0f0; /* Soft white text color */
+  background-image: url('/path/to/your/image.jpg'); /* Update with the correct image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+/* Header appears as a translucent overlay on the background */
+header {
+  background: rgba(0, 0, 0, 0.9); /* Dark translucent overlay */
+  color: #25f362;
+  padding: 30px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Stylish navigation with subtle hover effects */
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(65, 48, 48, 0.9); /* slight dark overlay for nav */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px; /* Spacing between nav items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1abc9c; /* Bright color for interactivity */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Main content styles with readable contrast */
+main {
+  padding: 30px;
+  border-radius: 5px;
+  background: rgba(65, 48, 48, 0.9); /* Slightly translucent white for content area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s; /* Smoothly transition changes */
+}
+
+main h2 {
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+main p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Footer with consistent theming */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main p {
+    font-size: 0.9rem;
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  nav ul li a {
+    padding: 10px 5px;
+  }
+}
+
+/* Improved list styling */
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
