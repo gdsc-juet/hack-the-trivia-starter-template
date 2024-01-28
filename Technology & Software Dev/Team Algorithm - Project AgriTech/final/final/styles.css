@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --primary-color: #465485;
+  --primary-color-dark: #3f4370;
+  --text-dark: #333333;
+  --text-light: #767368;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.content {
+  margin-left: auto;
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+}
+
+.logo {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.logo img {
+  max-width: 50px;
+}
+
+.content h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.content form {
+  display: grid;
+  gap: 3rem;
+}
+
+.input__row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.input__group {
+  width: 100%;
+  position: relative;
+}
+
+.input__group input {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: var(--text-dark);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.input__group.error input {
+  border-color: red;
+}
+
+.input__group label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  font-size: 1rem;
+  color: var(--text-dark);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input__group input:focus ~ label,
+.input__group input:not(:placeholder-shown) ~ label {
+  font-size: 0.8rem;
+  top: -0.5rem;
+  color: var(--text-light);
+}
+
+.input__group .error__field {
+  position: absolute;
+  left: 0;
+  bottom: -22px;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.content button {
+  max-width: fit-content;
+  margin: auto;
+  padding: 1rem 4rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--primary-color-dark)
+  );
+  border-radius: 5rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.image {
+  height: 110%;
+  margin-left: 8rem;
+  background-image: url("193da5c293.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

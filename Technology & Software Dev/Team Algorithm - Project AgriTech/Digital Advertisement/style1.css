@@ -1,0 +1,108 @@
+.english-text{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    color:hsl(50, 30%, 96%);
+    
+}    
+  
+.Hindi-text{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    color:hsl(50, 30%, 96%);
+
+}
+
+
+.heading2{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 50px;
+    color: white;
+    /* padding-bottom: 10px; */
+}
+.paragraph{
+    font-size:25px;
+    color:white;
+    text-align: center;
+    margin-bottom:-50px;
+    padding-inline: 30px;
+}
+
+.cover{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10%;
+}
+.card{
+    margin-top: 6rem;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(172, 255, 47, 0.832);
+    transition: all 0.2s ease 0s;
+}
+.card-title{
+    text-align: center;
+    color: white;
+}
+.card-text{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.card-img-top{
+    width: 360px;
+    border-radius: 10px;
+    height: 15rem;
+}
+.card img{
+    height:300px;
+    width:300px;
+}
+#card-img-top{
+    width: 360px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover{
+    transform: translateX(3px);
+    box-shadow: 5px 10px 30px rgba(172, 255, 47, 0.832);
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+body{
+    background-image:url("../bg2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+.logo{
+    width: 50px;
+    height: auto;
+    margin-top: -50px;
+}
+
+img{
+
+}
+
+#krishiLogo{
+    width: 100%;
+    background: white;
+    margin-top: -6px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a :hover{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}

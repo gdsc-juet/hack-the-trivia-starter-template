@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<link rel="stylesheet" href="form.css">
+
+<body>
+    <div class="home">
+        <div class="background">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <fieldset class="fieldBox">
+            <legend style="font-size: 20px; font-weight: bolder;">Transform Info</legend>
+            <form action="#" class="formBox" id="myForm">
+                <label id="Name"> Name</label>
+                <br>
+                <input type="text" id="nameInput">
+                <br>
+
+                <label id="Product">Product Name</label>
+                <br>
+                <input type="text" id="produceInput">
+                <br>
+
+                <label id="Transport Price Offer">Transport Price</label>
+                <br>
+                <input type="number" id="transportPriceInput" min="0">
+                <br>
+
+                <label id="PhoneNumber">Phone Number</label>
+                <br>
+                <input type="tel" id="phoneNoInput">
+                <br>
+
+
+                <label id="Pick-Up location">Pick Up Location </label>
+                <br>
+                <input type="text" id="locationPickUpInput">
+                <br>
+
+                <label id="Drop-Off Location">Drop Off Location</label>
+                <br>
+                <input type="text" id="locationDropOffInput">
+                <br>
+
+
+                <label id="Quantity">Quantity (in Kg)</label>
+                <br>
+                <input type="number" id="quantityInput" min="0" placeholder="0">
+                <br>
+
+                <label id="pickUpDate">Pick Up Date</label>
+                <br>
+                <input type="date" id="pick-up-date">
+                <br>
+
+                <div class="btn">
+                    <button id="submitButton" type="button">Submit</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('myForm');
+            var submitButton = document.getElementById('submitButton');
+
+            submitButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                form.reset();
+            });
+        });
+
+        window.addEventListener('beforeunload', function () {
+            document.getElementById('myForm').reset();
+        });
+    </script>
+</body>
+
+</html>

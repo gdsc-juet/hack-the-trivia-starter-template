@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 5rem;
+}
+.background_image {
+  height: 100%;
+  width: 100%;
+  filter: brightness(70%);
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+#icon {
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 100%;
+  padding: 18px;
+}
+
+.icons_div {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+.icons_div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#icon svg {
+  animation: flip 0.8s cubic-bezier(0.14, 0.75, 0.2, 1.01) 0.5s infinite;
+}
+.connect-line {
+  height: 60px;
+  width: 2px;
+  background: white;
+}
+#hero {
+  height: 300px;
+  width: 700px;
+  overflow: hidden;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  transition: 0.8s;
+  animation: open 0.7s linear 0.5s;
+}
+#hero p {
+  text-align: center;
+}
+#heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+#navbar {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 2px solid white;
+  margin-left: 21px;
+  border-radius: 5px;
+}
+#navbar div {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  border-right: 2px solid white;
+  padding-right: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+/* TODO: make the display flex */
+#signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+#signup-inner {
+  overflow: hidden;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: #151515;
+}
+#signup-inner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 22;
+}
+#signup-inner nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+#signup-inner nav i {
+  font-size: 2.5rem;
+}
+#signup-inner nav i {
+  font-size: 2.5rem;
+}
+#signup-inner #singup-body {
+  padding: 100px 100px;
+  position: relative;
+  /* background: white; */
+  height: 100%;
+  width: 50%;
+  z-index: 23;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+#signup-header {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 1rem;
+  padding: 4px;
+}
+#signup-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#singup-body p {
+  font-size: .8rem;
+  margin-top: 10px;
+  color: #9063de;
+}
+
+button {
+  margin-top: 40px;
+  padding: 15px 60px;
+  border-radius: 10px;
+  background-color: rgb(22,67,21);
+  transition: 0.2s;
+  cursor: pointer;
+  border: solid white 2px;
+  
+}
+
+button:hover {
+  background-color: rgb(22,67,21);
+  box-shadow: 0 0 10px rgb(24, 67, 23);
+  cursor: pointer;
+}
+
+#cross-icon{
+    position: relative;
+    z-index: 25;
+}
+#des{
+  margin-top: 10px;
+}
+#travel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  z-index: 20;
+}
+#travel #travel-img {
+    height: 100%;
+    width: 100%;
+    filter: brightness(70%);
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+
+.card {
+  padding: 40px;
+  /* height: 80%; */
+  width: 400px;
+  background: #030014;
+  border-radius: 30px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-header h1{
+    font-size: 1rem;
+
+}
+.card-header img{
+ filter: invert(1);
+  height: 40px;
+}
+
+.card-pricing h1 {
+  background: -webkit-linear-gradient(#a754eb, #700564);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+}
+
+.card-pricing {
+  padding: 40px 0;
+  border-bottom: 2px solid #0a0139cf;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card ul{
+    margin: 50px 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px   ;
+}
+
+.card-button{
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(118, 74, 196);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191231;
+}
+
+.card-extra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: #828181;
+}
+/* KeyFramers */
+@keyframes open {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 300px;
+  }
+}
+@keyframes flip {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
+#overlay {
+  display: none;
+  background-image: url("../assets/download (3).jpeg.jpg");
+}
+
+#bidButton{
+  border: 2px solid white;
+  display: grid;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 200px;
+  margin-top: 300px;
+  background: white;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+label{
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+#Form{
+  display: none;
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 20px 20px;
+  width: 500px;
+  height: fit-content;
+  margin-left: 430px;
+  margin-top: 40px;
+  background: #222222;
+
+}
+
+input{
+  width: 470px;
+}
+
+h2{
+  text-align: center;
+  height: 30px;
+  margin-top: 0;
+  background: #009955;
+  border-radius: 16px 16px 0 0;
+}
+#submitButton{
+  margin-left: 150px;
+  background: #009955;
+  font-family: "Montserrat", sans-serif;
+}
+#submitButton:hover{
+  background-color: #009955;
+  box-shadow: 0 0 10px #009955;
+  cursor: pointer;
+}
+
+main{
+  display: grid;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+#bookingHeading{
+  background: none;
+  color: white;
+  font-size: 100px;
+}
+
+h3{
+  margin-top: 200px;
+  color: white;;
+  margin-left: 620px;
+}
+
+#currentBookings{
+  margin-bottom: 10px;
+}
+
+#previousBooking{
+  margin-top: 10px;
+}
+
+#currentBookingLine{
+  background: white;
+  height: 2px;
+  width: 100%;
+}
+
+#previousBookingLine{
+  background: white;
+  height: 2px;
+  width: 100%;
+}
+
+#currentBookingBox{
+  width: 100%;
+  height: fit-content;
+  border: 1px solid black;
+  color: black;
+}
+
+#Bookings{
+  display: none;
+  color:white;
+}
+
+#bookingDetails{
+  color:white;
+  text-align: center;
+  height:180px;
+}
+
+body{
+  background: rgb(22,61,21);
+}
+
+#currentBookings h3{
+  color: white;
+}
+
+#itemImage{
+  /*width: 50px;*/
+  /*height: 60px;*/
+  display: none;
+  object-fit: cover;
+  position: absolute;
+  left: 300px;
+  bottom: 210px;
+  height: 180px;
+  width: 180px;
+}
+
+#backButtonDiv{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+
+}
+#backButton{
+  background-color: rgb(22,67,21);
+  color: white;
+  margin-top: -20px;
+  border: black 2px;
+}
+
+#offer1{
+  display: none;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+#offer2{
+  width: fit-content;
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#offer3{
+  width: fit-content;
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
