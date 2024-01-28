@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiMitra</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            background-color: #1f1f1f;
+            /* Dark background color */
+            color: #ffffff;
+            /* White text color */
+        }
+        
+        .card {
+            background-color: #2c2c2c;
+            /* Darker card background color */
+        }
+        /* Additional styling for better visibility */
+        
+        .card-body {
+            padding: 1.25rem;
+        }
+        
+        .card-title {
+            color: #ff9800;
+            /* Orange text color for card titles */
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-text {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading2">
+        <h2>AgriTechAdvancer</h2>
+    </div>
+
+
+
+    <div id="textContainer" onmouseover="changeLanguage('Hindi')" onmouseout="changeLanguage('english')">
+        <h1>
+            <p class="english-text">Digital Vigyapan</p>
+        </h1>
+    </div>
+
+    <div class="paragraph" onmouseover="changeLanguage('Hindi')" onmouseout="changeLanguage('english')">
+        <p>want u to sell your crops on a very larger market, here all the digital advertisement tools for you. Sell your crops easily!</p>
+    </div>
+
+    <div class="cover">
+        <a href="./form.html">
+            <div class="card" style="width: 20rem;">
+                <img src="./google-logo-9808.png" class="card-img-top" alt="Google Adsense">
+                <div class="card-body">
+                    <h1 class="card-title"> ₹99/month</h1>
+                    <p class="card-text">Advertise your crops on Google AdSense and reach potential customers effortlessly.</p>
+                </div>
+            </div>
+        </a>
+        <a href="./form.html">
+            <div class="card" style="width: 20rem;">
+                <img src="./logo-youtube.jpg" class="card-img-top" alt="YouTube Ads">
+                <div class="card-body">
+                    <h1 class="card-title">₹199/month</h1>
+                    <p class="card-text">Advertise your products and crops through engaging videos and photos on YouTube, reaching a wider audience.</p>
+                </div>
+            </div>
+        </a>
+        <!--
+        <a href="./form.html">
+            <div class="card" style="width: 20rem;">
+                <img src="Digital Advertisement/logo-youtube.jpg" id="card-img-top" height="55%" alt="YouTube Ads">
+                <div class="card-body">
+                    <h1 class="card-title">₹199/month</h1>
+                    <p class="card-text">Advertise your products and crops through engaging videos and photos on YouTube, reaching a wider audience.</p>
+                </div>
+            </div>
+        </a>-->
+
+
+        <a href="./form.html">
+            <div class="card" style="width: 20rem;">
+                <img src="./1658586823instagram-logo-transparent.png" class="card-img-top" alt="Instagram Ads">
+                <div class="card-body">
+                    <h1 class="card-title"> ₹59/month</h1>
+                    <p class="card-text">Share all kinds of crops on Instagram, targeting a diverse audience and connecting with marketing professionals.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        function changeLanguage(language) {
+            var textContainer = document.getElementById('textContainer');
+            var textElement = textContainer.querySelector('p');
+
+            // Define language-specific text
+            var languageText = {
+                'english': 'Digital Vigyapan',
+                'Hindi': 'डिजिटल विज्ञापन',
+            };
+
+            // Change the text and style based on the selected language
+            if (languageText[language]) {
+                textElement.textContent = languageText[language];
+                textElement.className = (language === 'english') ? 'english-text' : 'Hindi-text';
+            }
+        }
+    </script>
+</body>
+
+</html>
