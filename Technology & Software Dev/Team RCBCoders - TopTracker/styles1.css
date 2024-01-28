@@ -1,0 +1,199 @@
+body{
+    font-family:'sixtyfour',Arial, sans-serif;
+    background-color: #1d1e1f;
+    margin:0;
+    padding:0;
+}
+
+header{
+    background-color:#333;
+    padding:10px 0;
+    text-align:center;
+
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 5%;
+}
+
+header nav ul li a {
+    color:palevioletred;
+    font-size: 2.5vw;
+ }
+
+ nav.contact ul.social-icons li a {
+    font-size: 2.5vw;
+}
+
+
+main{
+    text-align: center;
+    padding:20px;
+    color: #a05640;
+}
+
+.cred a{
+    color :black;
+}
+.main_head{
+    font-size:4vw;
+}
+.h1{
+    font-size:3vw;
+}
+.h2{
+    font-size:2vw;
+}
+.h3{
+    font-size:3vw;
+}
+#big{
+    font-size: 5vw;
+}
+
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+
+.box{
+    flex: 1 1 calc(33.33% - 20px);
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #333;
+    color:palevioletred;
+}
+
+.movie li {
+    padding: 10px;
+}
+
+/* Hover Effect*/
+.movie li{
+    transition: 0.5s;
+}
+
+.movie li:hover{
+    color:red;
+    text-decoration: underline;
+    transform: scale(1.7);
+    z-index:2px;
+}
+
+
+@media (max-width: 768px){
+    .box{
+        flex: 1 1 calc(50% - 20px)
+    }
+}
+
+.top{
+    width:100%;
+    display:flex;
+    height:auto;
+    flex-direction:row;
+    flex-flow:wrap;
+    justify-content: space-between;
+
+}
+
+.image{
+       width: 100%;
+       max-width:350px;
+       height: auto;
+        border: 1px solid black;
+        margin:10px;
+        box-sizing: border-box;
+        background-color: #333;
+        color:#e7edea;
+        border-radius:13px;
+}
+
+.image img{
+    width: 100%;
+    height:auto;
+    display: block;
+    object-fit:cover;
+    border-radius: 8px;
+}
+
+.image button{
+    border-radius:10px;
+    background-color:#e28743;
+}
+
+
+.image p{
+    font-size:1.5vw;
+    font-family:'Rubik Maps',bold;
+    color: #E5D801;
+}
+
+@media (max-width: 1200px){
+    .image {
+        width: 40%;
+    }
+
+    .image p{
+        font-size:2vw;
+    }
+}
+
+@media (max-width: 780px){
+    .image {
+        width: 40%;
+    }
+
+    .image p{
+        font-size:2vw;
+    }
+}
+
+/* TO put footer at top */
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+footer{
+    margin-top:auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 7px 0;
+
+}
+
+
+.contact{
+    list-style: none;
+}
+
+.contact li{
+    display: inline;
+    margin: 0 12px;
+    padding:7px 0;
+}
+
+@media (max-width: 1000px){
+    
+
+    header nav ul li a {
+        color: pink;
+        font-size: 3.7vw;
+     }
+}
