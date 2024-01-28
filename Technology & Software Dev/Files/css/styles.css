@@ -1,94 +1,125 @@
 /* styles.css */
 
-/* Reset some basic elements */
+/* Reset basic elements for consistent styling */
 body, h1, h2, nav, ul, li, p, footer {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Box-sizing border-box to include padding and border in the element's total width and height */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body styles with a dark aesthetic */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #f0f0f0; /* Soft white text color */
+  background-image: url('/path/to/your/image.jpg'); /* Update with the correct image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+/* Header appears as a translucent overlay on the background */
+header {
+  background: rgba(52, 73, 94, 0.85); /* Dark translucent overlay */
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Stylish navigation with subtle hover effects */
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0,0,0,0.1); /* slight dark overlay for nav */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px; /* Spacing between nav items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f8f8f8;
+  padding: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1abc9c; /* Bright color for interactivity */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Main content styles with readable contrast */
+main {
+  padding: 30px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly translucent white for content area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s; /* Smoothly transition changes */
+}
+
+main h2 {
+  color: #3498db;
+  margin: 20px 0;
+}
+
+main p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Footer with consistent theming */
+footer {
+  background: rgba(52, 73, 94, 0.85);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
   }
-  
-  /* Apply a box-sizing rule */
-  *, *::before, *::after {
-    box-sizing: border-box;
+
+  main p {
+    font-size: 0.9rem;
   }
-  
-  /* Basic body styles */
+
   body {
-    font-family: 'Poppins', sans-serif; /* Choose a modern and stylish font */
-    line-height: 1.6;
-    color: #34495e; /* Darker text color for better readability */
-    background-color: #ecf0f1; /* Light gray background color */
     padding: 20px;
   }
-  
-  /* Header styles */
-  header {
-    background: #3498db; /* Blue header color for vibrancy */
-    color: #fff;
-    padding: 20px 0; /* Increase padding for better spacing */
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2em; /* Larger font size for the header */
-  }
-  
-  /* Navigation styles */
-  nav ul {
-    list-style: none;
-    background-color: #2980b9; /* Slightly darker than the header color */
-    text-align: center;
-    padding: 10px 0; /* Increase padding for better spacing */
-  }
-  
-  nav ul li {
-    display: inline;
-  }
-  
+
   nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 15px 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    padding: 10px 5px;
   }
-  
-  nav ul li a:hover {
-    background-color: #2c3e50; /* Darker color on hover for contrast */
-  }
-  
-  /* Main section styles */
-  main {
-    padding: 40px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Slightly stronger box shadow */
-  }
-  
-  main h2 {
-    margin-bottom: 20px;
-    color: #3498db;
-  }
-  
-  main p {
-    font-size: 1.1em;
-    margin-bottom: 1.5em; /* Increased margin for better spacing */
-    color: #555;
-  }
-  
-  /* Footer styles */
-  footer {
-    background: #3498db;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  /* Add padding to the bottom of the body to make sure the footer doesn't overlap content */
-  body {
-    padding-bottom: 60px;
-  }
-  
+}
+
+/* Improved list styling */
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
