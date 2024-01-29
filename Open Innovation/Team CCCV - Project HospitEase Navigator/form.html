@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HospitEase Navigator</title>
+    <style>
+        body {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #292b2c; 
+            color: #fff;
+        }
+
+        header {
+            background-color: #343a40; 
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .typed-container {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        .typed {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 2s steps(30, end) forwards;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        nav {
+            background-color: #343a40; 
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        input[type=text] {
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #5bc0de; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        form input,
+        form select {
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .results-container {
+            text-align: center;
+            padding: 2em;
+        }
+
+        .hospital-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            margin: 1em;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="typed-container">
+            <h1 class='typed' style="font-size: 70px;">HospitEase Navigator</h1>
+        </div>
+    </header>
+
+    <form>
+        <h2 style="color: #5bc0de;">Add/Update Hospital Information</h2>
+
+        <label for="hospitalName">Hospital Name:</label>
+        <input type="text" id="hospitalName" name="hospitalName" required>
+
+        <label for="numBeds">Number of Beds:</label>
+        <input type="number" id="numBeds" name="numBeds" required>
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" required>
+
+        <label for="cost">Cost per Night:</label>
+        <input type="number" id="cost" name="cost" required>
+
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability" required>
+            <option value="available">Available</option>
+            <option value="notAvailable">Not Available</option>
+        </select>
+
+        <br>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="logout()" style="background-color: green;">Logout</button>
+    </form>
+
+    <script>
+        function logout() {
+            window.location.href = 'index.html';
+        }
+    </script>
+    
+</body>
+</html>
+

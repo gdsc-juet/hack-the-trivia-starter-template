@@ -1,0 +1,159 @@
+CTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HospitEase Navigator</title>
+    <style>
+        body {
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #292b2c;
+            color: #fff; /* Light text color */
+        }
+
+        header {
+            background-color: #343a40; /* Darker header color */
+            color: #fff;
+            text-align: center;
+            padding: 120px 0; /* Adjusted padding to take full screen */
+        }
+
+        nav {
+            background-color: #343a40; /* Darker navigation color */
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 8em 0;
+        }
+
+        input[type=text] {
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50; /* Button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #staff-login-btn, #about-btn {
+            position: absolute;
+            top: 20px;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        #staff-login-btn {
+            right: 20px;
+            background-color: darkcyan; /* Medium Blue color for contrast */
+        }
+
+        #about-btn {
+            left: 20px;
+            background-color: darkcyan; /* Medium Blue color for contrast */
+        }
+
+        .results-container {
+            text-align: center;
+            padding: 2em;
+        }
+
+        .hospital-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            margin: 1em;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: inline-block;
+            font-family: monospace;
+            font-size: 24px;
+        }
+
+        .typed {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 1px solid;
+            width: 100px;;
+            animation: typing 1.5s steps(30, end) forwards, blinking 1s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100%}
+        }
+
+        @keyframes blinking {
+            0% {border-right-color: transparent}
+            50% {border-right-color: white}
+            100% {border-right-color: transparent}
+        }
+
+    </style>
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to be executed when the Staff Login button is clicked
+        document.getElementById('staff-login-btn').addEventListener('click', function() {
+            // Redirect to the login page
+            window.location.href = 'login.html';
+        });
+
+        // Function to be executed when the About button is clicked
+        document.getElementById('about-btn').addEventListener('click', function() {
+            // Redirect to the about page
+            window.location.href = 'about.html';
+        });
+    });
+</script>
+
+<body>
+
+    <header>
+        <img style="width: 150px; height: 120px;" class="logo" src="logo.png" alt="logo">
+        <div class="container">
+            <h1 class='typed' style="font-size: 70px;">HospitEase Navigator</h1>
+        </div>
+    </header>
+
+    <nav>
+        <button id="staff-login-btn">Staff Login</button>
+        <a href="#" id="about-btn">About</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search for hospitals...">
+        <button>Search</button>
+    </div>
+
+</body>
+</html>
+
